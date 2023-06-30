@@ -1,0 +1,274 @@
+.section, .header, .product {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.section__content, .header__content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 16px;
+}
+@media all and (width < 1440px) {
+  .section__content, .header__content {
+    max-width: 1100px;
+  }
+}
+@media all and (width < 1260px) {
+  .section__content, .header__content {
+    max-width: 900px;
+  }
+}
+@media all and (width < 1000px) {
+  .section__content, .header__content {
+    max-width: 700px;
+  }
+}
+@media all and (width < 620px) {
+  .section__content, .header__content {
+    max-width: 500px;
+  }
+}
+
+.section__double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media all and (width < 1260px) {
+  .section__double {
+    grid-template-columns: 1fr;
+  }
+}
+
+.header {
+  background-color: #454545;
+}
+
+.header__content {
+  display: flex;
+  padding: 16px 0;
+  justify-content: space-between;
+}
+
+.header__block {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.header__icon {
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__icon:hover {
+  opacity: 0.7;
+}
+.header__icon:active {
+  opacity: 0.3;
+}
+
+.header__link {
+  color: #dadada;
+  font-size: 12px;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.header__link:hover {
+  opacity: 0.7;
+}
+.header__link:active {
+  opacity: 0.3;
+}
+
+.product {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.product__content {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  align-content: center;
+  max-width: 380px;
+}
+
+.product__title {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.product__desc {
+  font-size: 28px;
+  line-height: 150%;
+}
+
+.product__action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+.product__action a {
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.product__action a:hover {
+  opacity: 0.7;
+}
+.product__action a:active {
+  opacity: 0.3;
+}
+
+.product__link {
+  color: #0066CC;
+  padding-right: 15px;
+  position: relative;
+}
+.product__link::after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(" /svg/arrowAction.svg");
+  position: absolute;
+  right: 0;
+  top: calc(50% - 6px);
+}
+
+.product-big {
+  max-height: 700px;
+  height: 100vh;
+  background-size: cover;
+}
+@media all and (width < 1000px) {
+  .product-big {
+    background-size: 120%;
+    max-height: 500px;
+  }
+}
+
+.product-small {
+  background-color: #f5f5f7;
+  max-height: 650px;
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+}
+.product-small .product__title {
+  font-size: 40px;
+}
+.product-small .product__desc {
+  font-size: 20px;
+}
+.product--dark {
+  background-color: black;
+}
+.product--dark .product__title,
+.product--dark .product__desc {
+  color: #f5f5f7;
+}
+
+.product--top .product__content {
+  align-content: flex-start;
+}
+
+.product--bottom .product__content {
+  align-content: flex-end;
+}
+
+.product--light {
+  background-color: #f5f5f7;
+}
+.product--iphone-pro {
+  background-image: url(/img/iphone-pro.png);
+  background-color: black;
+}
+
+.product--iphone {
+  background-image: url(/img/iphone.png);
+  background-color: #fbfbfd;
+}
+
+.product--trade-in {
+  background-image: url(/img/trade-in.png);
+  background-color: white;
+}
+
+.product--www {
+  background-image: url(/img/www.png);
+  background-color: black;
+}
+
+.product--watch {
+  background-image: url(/img/watch.png);
+  background-color: black;
+}
+
+.product--ipad {
+  background-image: url(/img/ipad.png);
+  background-color: black;
+}
+
+.product--wireless {
+  background-image: url(/img/wireless.png);
+  background-color: black;
+}
+
+.product--business {
+  background-image: url(/img/business.png);
+  background-color: black;
+}
+
+.product--card {
+  background-image: url(/img/card.png);
+  background-color: black;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.footer a {
+  font-size: 12px;
+  color: #424245;
+  display: block;
+  transition: opacity 0.7s;
+  cursor: pointer;
+}
+.footer a:hover {
+  opacity: 0.7;
+}
+.footer a:active {
+  opacity: 0.3;
+}
+.footer h2 {
+  font-weight: bold;
+}
+.footer__content {
+  width: 70%;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(0, 150px));
+}
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__link__title {
+  height: min-content;
+}
+.footer__link__item {
+  display: grid;
+  justify-items: flex-start;
+}
+
+/*# sourceMappingURL=style.css.map */
